@@ -1,3 +1,15 @@
 $primary-color: #0b0d17;
 $secondary-color: #d0d6f9;
 $white: #ffffff;
+$background-grey: #979797;
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-vertical-center {
+  display: flex;
+  align-items: center;
+}

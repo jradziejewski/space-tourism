@@ -13,3 +13,17 @@ $background-grey: #979797;
   display: flex;
   align-items: center;
 }
+
+@mixin background-image($image) {
+  background-image: url(#{$image}-desktop.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @media only screen and (max-width: 768px) {
+    background: url(#{$image}-tablet.jpg);
+  }
+
+  @media only screen and (max-width: 375px) {
+    background: url(#{$image}-mobile.jpg);
+  }
+}

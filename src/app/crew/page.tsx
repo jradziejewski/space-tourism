@@ -1,4 +1,5 @@
 import SubpageHeader from "../components/subpage-header/SubpageHeader";
+import "./crew.scss";
 
 const Page = () => {
   return (

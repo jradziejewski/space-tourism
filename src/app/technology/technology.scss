@@ -1,0 +1,7 @@
+@import "../styles/variables";
+
+body {
+  @include background-image(
+    "../../../public/assets/technology/background-technology"
+  );
+}

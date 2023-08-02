@@ -1,5 +1,9 @@
 @import "../styles/variables.scss";
 
+body {
+  @include background-image("../../../public/assets/home/background-home");
+}
+
 .homepage {
   @include flex-center;
   margin-top: 48px;

@@ -1,4 +1,5 @@
 import SubpageHeader from "../components/subpage-header/SubpageHeader";
+import "./technology.scss";
 
 const Page = () => {
   return (

@@ -79,6 +79,7 @@
   }
   .divider {
     display: none;
+    z-index: 0;
   }
   .links-container {
     width: 100%;
@@ -140,6 +141,8 @@
     }
     .links-container {
       height: 100vh;
+      position: absolute;
+      left: 25%;
       display: flex;
       justify-content: flex-start;
       align-items: flex-start;

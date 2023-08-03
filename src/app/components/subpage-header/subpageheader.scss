@@ -2,7 +2,20 @@
 
 .subpage-header {
   @include flex-center;
-  gap: 16px;
+  gap: 18px;
   text-align: center;
   text-transform: uppercase;
+  letter-spacing: 2.7px;
+  span {
+    color: rgba(255, 255, 255, 0.25);
+    font-weight: 700;
+  }
+}
+
+@media (min-width: $mobile) {
+  .subpage-header {
+    justify-content: flex-start;
+    padding-left: 24px;
+    padding-top: 24px;
+  }
 }

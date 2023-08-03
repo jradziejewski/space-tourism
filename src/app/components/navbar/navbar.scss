@@ -70,8 +70,9 @@
   }
 }
 
-@media screen and (min-width: 500px) and (max-width: 768px) {
+@media screen and (min-width: $mobile) and (max-width: $tablet) {
   .navbar {
+    width: 60%;
     margin-top: 0;
     .navbar-logo {
       margin-right: 48px;
@@ -82,8 +83,12 @@
     z-index: 0;
   }
   .links-container {
-    width: 100%;
-    padding: 0 12px 0 24px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 96px;
+    max-width: 450px;
+    padding: 0 36px 0 24px;
     white-space: pre-wrap;
     justify-content: center;
   }
@@ -95,7 +100,7 @@
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: $mobile) {
   .close-icon,
   .hamburger-icon {
     position: absolute;

@@ -5,3 +5,17 @@ body {
     "../../../public/assets/destination/background-destination"
   );
 }
+
+.destination-buttons {
+  @include flex-center;
+  gap: 16px;
+  font-size: 14px;
+  button {
+    text-transform: uppercase;
+    border-bottom: 1px solid transparent;
+    &:hover {
+      border-bottom: 1px solid $white;
+      transition: border-bottom 0.1s ease-in-out;
+    }
+  }
+}

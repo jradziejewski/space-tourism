@@ -1,20 +1,21 @@
 "use client";
-import SubpageHeader from "../components/subpage-header/SubpageHeader";
-import "./destination.scss";
+import { useContext } from "react";
+import Image from "next/image";
 import { barlow_condensed } from "../styles/customFonts";
+import SubpageHeader from "../components/subpage-header/SubpageHeader";
 import DestinationButtons from "./DestinationButtons";
 import DestinationContext, { DestinationProvider } from "./DestinationContext";
-import { useContext } from "react";
+import "./destination.scss";
+import DestinationView from "./DestinationView";
 
 const Page = () => {
-  const { activeDestination } = useContext(DestinationContext);
-
   return (
     <DestinationProvider>
-      <div className={`${barlow_condensed.className}`}>
-        <SubpageHeader title="Pick your destination" number={1} />
+      <SubpageHeader title="Pick your destination" number={1} />
+      <div className={`${barlow_condensed.className} destination`}>
+        <DestinationImage />
         <DestinationButtons />
-        <SomeComponent />
+        <DestinationView />
       </div>
     </DestinationProvider>
   );
@@ -22,7 +23,19 @@ const Page = () => {
 
 export default Page;
 
-const SomeComponent = () => {
+const DestinationImage = () => {
   const { activeDestination } = useContext(DestinationContext);
-  return <span>{activeDestination.name}</span>;
+
+  if (!activeDestination || !activeDestination.image) {
+    return null;
+  }
+
+  return (
+    <Image
+      src={activeDestination.image}
+      height="445"
+      width="445"
+      alt={`${activeDestination.name} image}`}
+    />
+  );
 };

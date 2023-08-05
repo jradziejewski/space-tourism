@@ -60,8 +60,8 @@ export const destinations = [
   createDestination(
     "Europa",
     europaDescription,
-    "225 mil. km",
-    "9 months",
+    "628 mil. km",
+    "3 years",
     europaImage
   ),
   createDestination(

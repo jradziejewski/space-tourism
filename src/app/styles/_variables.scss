@@ -2,8 +2,9 @@ $primary-color: #0b0d17;
 $secondary-color: #d0d6f9;
 $white: #ffffff;
 $background-grey: #979797;
+$divider-grey: #383b4b;
 
-$tablet: 768px;
+$tablet: 1000px;
 $mobile: 500px;
 
 @mixin flex-center {
@@ -24,6 +25,8 @@ $mobile: 500px;
 
   @media only screen and (max-width: $tablet) {
     background: url(#{$image}-tablet.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   @media only screen and (max-width: 375px) {

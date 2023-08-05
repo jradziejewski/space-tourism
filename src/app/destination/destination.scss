@@ -6,6 +6,12 @@ body {
   );
 }
 
+.destination-image {
+  width: 170px;
+  height: 170px;
+  margin: 32px 0 26px 0;
+}
+
 .destination {
   @include flex-center;
   flex-direction: column;
@@ -16,20 +22,58 @@ body {
   gap: 16px;
   font-size: 14px;
   button {
+    letter-spacing: 2.36px;
     text-transform: uppercase;
-    border-bottom: 1px solid transparent;
+    border-bottom: 2px solid transparent;
     &:hover {
-      border-bottom: 1px solid $white;
+      border-bottom: 2px solid $white;
       transition: border-bottom 0.1s ease-in-out;
     }
   }
 }
 
 .destination-view {
+  @include flex-center;
+  flex-direction: column;
+  margin-top: 16px;
   h1 {
-    font-size: 40px;
+    font-size: 56px;
     text-align: center;
-    margin-bottom: 16px;
+    margin-top: 0;
     text-transform: uppercase;
+  }
+  .destination-description {
+    word-spacing: 2px;
+    line-height: 25px;
+    font-size: 15px;
+    width: 87%;
+    color: $secondary-color;
+    text-align: center;
+  }
+}
+
+.destination-divider {
+  margin: 32px 0;
+  width: 80%;
+  height: 1px;
+  z-index: 1;
+  background-color: $divider-grey;
+}
+
+.destination-feature {
+  @include flex-center;
+  flex-direction: column;
+  text-transform: uppercase;
+  gap: 12px;
+  margin-bottom: 32px;
+  span {
+    letter-spacing: 2.36px;
+    font-size: 14px;
+    color: $secondary-color;
+  }
+  p {
+    font-size: 28px;
+    white-space: nowrap;
+    color: $white;
   }
 }

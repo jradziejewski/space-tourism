@@ -32,6 +32,7 @@ const DestinationImage = () => {
 
   return (
     <Image
+      className="destination-image"
       src={activeDestination.image}
       height="445"
       width="445"

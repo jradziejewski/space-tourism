@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <div className="navbar" ref={navRef}>
       <NavbarIcon />
-      <div className="divider" />
+      <div className="navbar-divider" />
       <div className={`links-container ${isHome ? "blurred" : "grey"}`}>
         <StyledLink to="/" text="home" />
         <StyledLink to="/destination" text="destination" />

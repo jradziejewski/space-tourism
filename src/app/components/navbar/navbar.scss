@@ -19,7 +19,7 @@
   }
 }
 
-.divider {
+.navbar-divider {
   width: 100%;
   height: 1px;
   z-index: 1;
@@ -78,7 +78,7 @@
       margin-right: 48px;
     }
   }
-  .divider {
+  .navbar-divider {
     display: none;
     z-index: 0;
   }
@@ -109,7 +109,7 @@
     transform: translateX(-100%);
   }
 
-  .divider {
+  .navbar-divider {
     display: none;
   }
 
@@ -123,6 +123,7 @@
   .navbar {
     align-items: flex-start;
     justify-content: space-between;
+    height: 86px;
     margin-top: 0;
     .navbar-logo {
       width: 40px;

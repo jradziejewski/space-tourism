@@ -37,4 +37,5 @@ export const DestinationProvider = ({
     </DestinationContext.Provider>
   );
 };
+
 export default DestinationContext;

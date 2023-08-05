@@ -3,3 +3,63 @@
 body {
   @include background-image("../../../public/assets/crew/background-crew");
 }
+
+.crew {
+  @include flex-center;
+  flex-direction: column;
+}
+
+.crew-image {
+  margin-top: 32px;
+  max-height: 223px;
+  width: auto;
+  height: auto;
+}
+
+.crew-controls {
+  @include flex-center;
+  margin: 32px 0;
+  gap: 16px;
+}
+
+.crew-button {
+  width: 10px;
+  height: 10px;
+  border: 1px solid rgb(255, 255, 255, 0.1744);
+  background-color: rgb(255, 255, 255, 0.1744);
+  border-radius: 100%;
+  :hover {
+    background-color: white;
+  }
+}
+.active {
+  background-color: $white;
+}
+
+.crew-image-container {
+  @include flex-center;
+  margin: auto;
+  width: 80%;
+  border-bottom: 1px solid $divider-grey;
+}
+
+.crew-view {
+  @include flex-center;
+  text-transform: uppercase;
+  flex-direction: column;
+  .crew-role {
+    color: rgb(255, 255, 255, 0.49);
+  }
+  .crew-name {
+    font-size: 24px;
+  }
+  .crew-description {
+    margin-top: 16px;
+    font-size: 16px;
+    letter-spacing: 0.25px;
+    text-transform: none;
+    width: 70%;
+    text-align: center;
+    color: $secondary-color;
+  }
+}

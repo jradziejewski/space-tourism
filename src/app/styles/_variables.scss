@@ -4,7 +4,7 @@ $white: #ffffff;
 $background-grey: #979797;
 $divider-grey: #383b4b;
 
-$tablet: 1000px;
+$tablet: 768px;
 $mobile: 500px;
 
 @mixin flex-center {
@@ -31,5 +31,7 @@ $mobile: 500px;
 
   @media only screen and (max-width: 375px) {
     background: url(#{$image}-mobile.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }

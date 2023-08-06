@@ -64,9 +64,13 @@ body {
 }
 
 @media (min-width: 1280px) {
+  body {
+    overflow: hidden;
+  }
   .homepage {
-    margin: 251px 165px 0 165px;
-    justify-content: space-between;
+    height: 65vh;
+    justify-content: space-evenly;
+    gap: 5rem;
     flex-direction: row;
   }
   .homepage-text {

@@ -5,3 +5,51 @@ body {
     "../../../public/assets/technology/background-technology"
   );
 }
+
+.terminology-header {
+  text-transform: uppercase;
+  color: $secondary-color;
+}
+
+.technology-buttons {
+  @include flex-center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  gap: 1rem;
+  .technology-button {
+    @include flex-center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid $white;
+    border-radius: 100%;
+    padding: 1rem;
+  }
+}
+
+.active {
+  background-color: $white;
+  color: black;
+}
+
+.technology-image {
+  margin: 2rem 0;
+  width: 100%;
+  height: 170px;
+}
+
+.technology-view {
+  @include flex-center;
+  flex-direction: column;
+  h1 {
+    font-size: 24px;
+    text-transform: uppercase;
+    margin: 0.5rem 0 1rem 0;
+  }
+  .technology-description {
+    width: 88%;
+    text-align: center;
+    font-size: 15px;
+    color: $secondary-color;
+    line-height: 25px;
+  }
+}

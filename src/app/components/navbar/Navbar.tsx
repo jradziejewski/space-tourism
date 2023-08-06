@@ -3,11 +3,15 @@ import Image from "next/image";
 import StyledLink from "./StyledLink";
 import "./navbar.scss";
 import NavbarIcon from "./NavbarLogo";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const Navbar = () => {
-  const isHome = window.location.pathname === "/";
+  const [isHome, setIsHome] = useState(true);
   const navRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    setIsHome(window.location.pathname === "/");
+  }, []);
 
   const showNavbar = () => {
     if (!navRef.current) return;

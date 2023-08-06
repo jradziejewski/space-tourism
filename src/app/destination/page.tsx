@@ -13,9 +13,13 @@ const Page = () => {
     <DestinationProvider>
       <SubpageHeader title="Pick your destination" number={1} />
       <div className={`${barlow_condensed.className} destination`}>
-        <DestinationImage />
-        <DestinationButtons />
-        <DestinationView />
+        <div className="destination-image-container">
+          <DestinationImage />
+        </div>
+        <div className="destination-content-container">
+          <DestinationButtons />
+          <DestinationView />
+        </div>
       </div>
     </DestinationProvider>
   );

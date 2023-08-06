@@ -10,14 +10,16 @@ const DestinationView = () => {
       <h1 className={`${bellefair.className}`}>{activeDestination.name}</h1>
       <p className="destination-description">{activeDestination.description}</p>
       <div className="destination-divider" />
-      <Feature
-        featureText="Avg. Distance"
-        featureValue={activeDestination.avgDistance}
-      />
-      <Feature
-        featureText="Est. Travel Time"
-        featureValue={activeDestination.travelTime}
-      />
+      <div className="destination-features">
+        <Feature
+          featureText="Avg. Distance"
+          featureValue={activeDestination.avgDistance}
+        />
+        <Feature
+          featureText="Est. Travel Time"
+          featureValue={activeDestination.travelTime}
+        />
+      </div>
     </div>
   );
 };

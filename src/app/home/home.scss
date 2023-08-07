@@ -4,6 +4,12 @@ body {
   @include background-image("../../../public/assets/home/background-home");
 }
 
+.navbar {
+  .links-container {
+    backdrop-filter: blur(10px);
+  }
+}
+
 .homepage {
   @include flex-center;
   margin-top: 48px;

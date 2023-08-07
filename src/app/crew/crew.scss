@@ -4,6 +4,13 @@ body {
   @include background-image("../../../public/assets/crew/background-crew");
 }
 
+.navbar {
+  .links-container {
+    background-color: rgb(255, 255, 255, 0.04);
+    backdrop-filter: blur(10px);
+  }
+}
+
 .crew {
   @include flex-center;
   flex-direction: column;

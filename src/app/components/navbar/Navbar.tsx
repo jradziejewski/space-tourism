@@ -6,12 +6,7 @@ import NavbarIcon from "./NavbarLogo";
 import { useEffect, useRef, useState } from "react";
 
 const Navbar = () => {
-  const [isHome, setIsHome] = useState(true);
   const navRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    setIsHome(window.location.pathname === "/");
-  }, []);
 
   const showNavbar = () => {
     if (!navRef.current) return;
@@ -22,7 +17,7 @@ const Navbar = () => {
     <div className="navbar" ref={navRef}>
       <NavbarIcon />
       <div className="navbar-divider" />
-      <div className={`links-container ${isHome ? "blurred" : "grey"}`}>
+      <div className="links-container">
         <StyledLink to="/" text="home" />
         <StyledLink to="/destination" text="destination" />
         <StyledLink to="/crew" text="crew" />

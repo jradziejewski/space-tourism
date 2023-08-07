@@ -6,7 +6,6 @@
 }
 
 .navbar {
-  // background-color: pink;
   @include flex-vertical-center;
   flex-direction: row;
   justify-content: space-between;
@@ -55,13 +54,6 @@
     border-bottom: 3px solid $white;
     transition: border-bottom 0.1s ease-in-out;
   }
-}
-
-.blurred {
-  backdrop-filter: blur(10px);
-}
-.grey {
-  background-color: $background-grey;
 }
 
 @media screen and (max-width: 1280px) {

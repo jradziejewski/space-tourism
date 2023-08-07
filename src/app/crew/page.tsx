@@ -10,11 +10,13 @@ import CrewControls from "./CrewControls";
 const Page = () => {
   return (
     <CrewProvider>
-      <div>
-        <SubpageHeader title="Meet your crew" number={2} />
+      <SubpageHeader title="Meet your crew" number={2} />
+      <div className="crew">
         <CrewMemberImage />
-        <CrewControls />
-        <CrewMemberView />
+        <div className="crew-content">
+          <CrewControls />
+          <CrewMemberView />
+        </div>
       </div>
     </CrewProvider>
   );

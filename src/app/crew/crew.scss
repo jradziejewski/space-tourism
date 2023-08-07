@@ -63,3 +63,81 @@ body {
     color: $secondary-color;
   }
 }
+
+@media (min-width: $mobile) and (min-height: 800px) {
+  body {
+    padding: 0;
+    height: 100%;
+  }
+  .crew {
+    flex-direction: column-reverse;
+    margin-top: 4rem;
+  }
+  .crew-view {
+    .crew-role {
+      font-size: 24px;
+    }
+    .crew-name {
+      font-size: 40px;
+    }
+  }
+  .crew-image-container {
+    margin-bottom: 0;
+    bottom: 0;
+    z-index: 0;
+  }
+  .crew-image {
+    max-height: 520px;
+  }
+}
+
+@media (min-width: 1000px) {
+  body {
+    height: 100vh;
+    overflow-y: hidden;
+  }
+  .crew {
+    display: flex;
+    margin-left: 20vw;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+  .crew-content {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 50%;
+    margin: 5rem 0;
+    height: 100%;
+  }
+  .crew-image-container {
+    max-width: 40%;
+    height: 100%;
+    border: unset;
+  }
+  .crew-image {
+    position: absolute;
+    max-height: unset;
+    height: 60vh;
+    bottom: 0;
+  }
+  .crew-view {
+    align-items: flex-start;
+    .crew-role {
+      font-size: 32px;
+    }
+    .crew-name {
+      font-size: 56px;
+    }
+    .crew-description {
+      text-align: unset;
+      width: 450px;
+    }
+  }
+  .crew-controls {
+    justify-content: left;
+    .crew-button {
+      width: 15px;
+      height: 15px;
+    }
+  }
+}

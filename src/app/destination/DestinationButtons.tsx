@@ -8,7 +8,7 @@ const DestinationButtons = () => {
 
   function handleDestinationSelect(name: string) {
     const destination = destinations.find(
-      (destination) => destination.name === name
+      (destination) => destination.name === name,
     );
     if (!destination) return;
     selectDestination(destination);
@@ -20,7 +20,11 @@ const DestinationButtons = () => {
         <button
           key={destination.name}
           onClick={() => handleDestinationSelect(destination.name)}
-          className="destination-button active"
+          className={`destination-button ${
+            destination.name === activeDestination.name
+              ? "destination-button-active"
+              : ""
+          }`}
         >
           {destination.name}
         </button>

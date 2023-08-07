@@ -21,15 +21,20 @@ body {
   @include flex-center;
   gap: 16px;
   font-size: 14px;
-  button {
+  .destination-button {
     letter-spacing: 2.36px;
     text-transform: uppercase;
     border-bottom: 2px solid transparent;
     &:hover {
-      border-bottom: 2px solid $white;
-      transition: border-bottom 0.1s ease-in-out;
+      border-bottom: 2px solid rgb(255, 255, 255, 0.6);
+      transition: border-bottom 0.3s ease-in-out;
     }
   }
+}
+
+.destination-button-active {
+  border-bottom: 2px solid $white !important;
+  transition: border-bottom 0.8s ease-in-out;
 }
 
 .destination-view {

@@ -7,21 +7,27 @@ import DestinationButtons from "./DestinationButtons";
 import DestinationContext, { DestinationProvider } from "./DestinationContext";
 import "./destination.scss";
 import DestinationView from "./DestinationView";
+import Head from "next/head";
+import { destinations } from "./destinationsData";
+import DestinationsImagePreloadHeader from "./DestinationsImagePreloadHeader";
 
 const Page = () => {
   return (
-    <DestinationProvider>
-      <SubpageHeader title="Pick your destination" number={1} />
-      <div className={`${barlow_condensed.className} destination`}>
-        <div className="destination-image-container">
-          <DestinationImage />
+    <>
+      <DestinationsImagePreloadHeader />
+      <DestinationProvider>
+        <SubpageHeader title="Pick your destination" number={1} />
+        <div className={`${barlow_condensed.className} destination`}>
+          <div className="destination-image-container">
+            <DestinationImage />
+          </div>
+          <div className="destination-content-container">
+            <DestinationButtons />
+            <DestinationView />
+          </div>
         </div>
-        <div className="destination-content-container">
-          <DestinationButtons />
-          <DestinationView />
-        </div>
-      </div>
-    </DestinationProvider>
+      </DestinationProvider>
+    </>
   );
 };
 

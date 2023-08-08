@@ -6,10 +6,7 @@
 
 ### To Do:
 
-- add responsive design to technology page
-- fix images loading
-- add animations when content change
-- probably fix some bugs...
+- fix some bugs...
 
 ### Known issues:
 

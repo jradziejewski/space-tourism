@@ -1,7 +1,10 @@
 import { StaticImageData } from "next/image";
 import launchVehicleLandscape from "../../../public/assets/technology/image-launch-vehicle-landscape.jpg";
+import launchVehiclePortrait from "../../../public/assets/technology/image-launch-vehicle-portrait.jpg";
 import spaceportLandscape from "../../../public/assets/technology/image-spaceport-landscape.jpg";
+import spaceportPortrait from "../../../public/assets/technology/image-spaceport-portrait.jpg";
 import spaceCapsuleLandscape from "../../../public/assets/technology/image-space-capsule-landscape.jpg";
+import spaceCapsulePortrait from "../../../public/assets/technology/image-space-capsule-portrait.jpg";
 
 const launchVehicleDescription =
   "A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!";
@@ -13,18 +16,21 @@ const spaceCapsuleDescription =
 export type Technology = {
   name: string;
   description: string;
-  image: StaticImageData;
+  imageLandscape: StaticImageData;
+  imagePortrait: StaticImageData;
 };
 
 function createTechnology(
   name: string,
   description: string,
-  image: StaticImageData
+  imageLandscape: StaticImageData,
+  imagePortrait: StaticImageData,
 ): Technology {
   return {
     name,
     description,
-    image,
+    imageLandscape,
+    imagePortrait,
   };
 }
 
@@ -32,12 +38,19 @@ export const technologies = [
   createTechnology(
     "Launch Vehicle",
     launchVehicleDescription,
-    launchVehicleLandscape
+    launchVehicleLandscape,
+    launchVehiclePortrait,
   ),
-  createTechnology("Spaceport", spaceportDescription, spaceportLandscape),
+  createTechnology(
+    "Spaceport",
+    spaceportDescription,
+    spaceportLandscape,
+    spaceportPortrait,
+  ),
   createTechnology(
     "Space Capsule",
     spaceCapsuleDescription,
-    spaceCapsuleLandscape
+    spaceCapsuleLandscape,
+    spaceCapsulePortrait,
   ),
 ];

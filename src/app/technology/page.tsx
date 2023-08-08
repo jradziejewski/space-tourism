@@ -11,9 +11,15 @@ const Page = () => {
   return (
     <TechnologyProvider>
       <SubpageHeader title="Space Launch 101" number={3} />
-      <TechnologyImage />
-      <TechnologyButtons />
-      <TechnologyView />
+      <div className="technology">
+        <div className="technology-image-container">
+          <TechnologyImage />
+        </div>
+        <div className="technology-content">
+          <TechnologyButtons />
+          <TechnologyView />
+        </div>
+      </div>
     </TechnologyProvider>
   );
 };
@@ -23,17 +29,26 @@ export default Page;
 const TechnologyImage = () => {
   const { activeTechnology } = useContext(TechnologyContext);
 
-  if (!activeTechnology || !activeTechnology.image) {
+  if (!activeTechnology || !activeTechnology.imageLandscape) {
     return null;
   }
 
   return (
-    <Image
-      className="technology-image"
-      src={activeTechnology.image}
-      height="170"
-      width="445"
-      alt={`${activeTechnology.name} image}`}
-    />
+    <>
+      <Image
+        className="technology-image-landscape"
+        src={activeTechnology.imageLandscape}
+        height="170"
+        width="445"
+        alt={`${activeTechnology.name} image}`}
+      />
+      <Image
+        className="technology-image-portrait"
+        src={activeTechnology.imagePortrait}
+        height="170"
+        width="445"
+        alt={`${activeTechnology.name} image}`}
+      />
+    </>
   );
 };

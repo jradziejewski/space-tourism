@@ -3,7 +3,12 @@
 @tailwind utilities;
 @import "./styles/variables";
 
+html {
+  background-color: black;
+}
+
 body {
+  background-color: black;
   overflow-x: hidden;
   height: 100vh;
   color: white;

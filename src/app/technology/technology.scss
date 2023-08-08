@@ -103,12 +103,16 @@ body {
       font-size: 18px;
     }
   }
+  .terminology-header {
+    font-size: 20px;
+  }
   .technology-content {
     display: flex;
     gap: 4rem;
   }
   .technology-buttons {
     flex-direction: column;
+    gap: 32px;
     .technology-button {
       width: 80px;
       height: 80px;

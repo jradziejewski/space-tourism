@@ -7,7 +7,6 @@ import DestinationButtons from "./DestinationButtons";
 import DestinationContext, { DestinationProvider } from "./DestinationContext";
 import "./destination.scss";
 import DestinationView from "./DestinationView";
-import Head from "next/head";
 import { destinations } from "./destinationsData";
 import DestinationsImagePreloadHeader from "./DestinationsImagePreloadHeader";
 
@@ -41,13 +40,47 @@ const DestinationImage = () => {
   }
 
   return (
-    <Image
-      className="destination-image"
-      src={activeDestination.image}
-      height="445"
-      width="445"
-      priority
-      alt={`${activeDestination.name} image}`}
-    />
+    <>
+      <Image
+        className={`destination-image ${
+          activeDestination.name === "Moon" ? "visible-image" : "hidden-image"
+        }`}
+        src={destinations[0].image}
+        height="445"
+        width="445"
+        priority
+        alt="moon image"
+      />
+      <Image
+        className={`destination-image ${
+          activeDestination.name === "Mars" ? "visible-image" : "hidden-image"
+        }`}
+        src={destinations[1].image}
+        height="445"
+        width="445"
+        priority
+        alt="mars image"
+      />
+      <Image
+        className={`destination-image ${
+          activeDestination.name === "Europa" ? "visible-image" : "hidden-image"
+        }`}
+        src={destinations[2].image}
+        height="445"
+        width="445"
+        priority
+        alt="europa image"
+      />
+      <Image
+        className={`destination-image ${
+          activeDestination.name === "Titan" ? "visible-image" : "hidden-image"
+        }`}
+        src={destinations[3].image}
+        height="445"
+        width="445"
+        priority
+        alt="titan image"
+      />
+    </>
   );
 };

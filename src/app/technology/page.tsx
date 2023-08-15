@@ -1,11 +1,12 @@
 "use client";
 import { useContext } from "react";
-import SubpageHeader from "../components/subpage-header/SubpageHeader";
-import "./technology.scss";
-import TechnologyContext, { TechnologyProvider } from "./TechnologyContext";
 import Image from "next/image";
+import SubpageHeader from "../components/subpage-header/SubpageHeader";
+import TechnologyContext, { TechnologyProvider } from "./TechnologyContext";
 import TechnologyView from "./TechnologyView";
 import TechnologyButtons from "./TechnologyButtons";
+import { technologies } from "./technologyData";
+import "./technology.scss";
 
 const Page = () => {
   return (
@@ -36,16 +37,60 @@ const TechnologyImage = () => {
   return (
     <>
       <Image
-        className="technology-image-landscape"
-        src={activeTechnology.imageLandscape}
+        className={`technology-image-landscape ${
+          activeTechnology === technologies[0] ? "" : "hidden-image"
+        }`}
+        src={technologies[0].imageLandscape}
         height="170"
         width="445"
         priority
         alt={`${activeTechnology.name} image}`}
       />
       <Image
-        className="technology-image-portrait"
-        src={activeTechnology.imagePortrait}
+        className={`technology-image-landscape ${
+          activeTechnology === technologies[1] ? "" : "hidden-image"
+        }`}
+        src={technologies[1].imageLandscape}
+        height="170"
+        width="445"
+        priority
+        alt={`${activeTechnology.name} image}`}
+      />
+      <Image
+        className={`technology-image-landscape ${
+          activeTechnology === technologies[2] ? "" : "hidden-image"
+        }`}
+        src={technologies[2].imageLandscape}
+        height="170"
+        width="445"
+        priority
+        alt={`${activeTechnology.name} image}`}
+      />
+      <Image
+        className={`technology-image-portrait ${
+          activeTechnology === technologies[0] ? "" : "hidden-image"
+        }`}
+        src={technologies[0].imagePortrait}
+        height="170"
+        width="445"
+        priority
+        alt={`${activeTechnology.name} image}`}
+      />
+      <Image
+        className={`technology-image-portrait ${
+          activeTechnology === technologies[1] ? "" : "hidden-image"
+        }`}
+        src={technologies[1].imagePortrait}
+        height="170"
+        width="445"
+        priority
+        alt={`${activeTechnology.name} image}`}
+      />
+      <Image
+        className={`technology-image-portrait ${
+          activeTechnology === technologies[2] ? "" : "hidden-image"
+        }`}
+        src={technologies[2].imagePortrait}
         height="170"
         width="445"
         priority

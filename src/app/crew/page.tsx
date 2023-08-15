@@ -38,6 +38,7 @@ const CrewMemberImage = () => {
         src={activeCrew.image}
         width="327"
         height="223"
+        priority
         alt={`${activeCrew.name} image}`}
       />
     </div>

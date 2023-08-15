@@ -46,6 +46,7 @@ const DestinationImage = () => {
       src={activeDestination.image}
       height="445"
       width="445"
+      priority
       alt={`${activeDestination.name} image}`}
     />
   );

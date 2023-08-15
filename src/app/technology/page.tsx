@@ -40,6 +40,7 @@ const TechnologyImage = () => {
         src={activeTechnology.imageLandscape}
         height="170"
         width="445"
+        priority
         alt={`${activeTechnology.name} image}`}
       />
       <Image
@@ -47,6 +48,7 @@ const TechnologyImage = () => {
         src={activeTechnology.imagePortrait}
         height="170"
         width="445"
+        priority
         alt={`${activeTechnology.name} image}`}
       />
     </>
